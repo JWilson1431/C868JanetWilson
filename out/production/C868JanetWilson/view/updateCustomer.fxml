@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomerController">
+    <children>
+        <Label layoutX="33.0" layoutY="23.0" text="Update a customer record">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="107.0" layoutY="84.0" text="Customer ID" />
+        <Label layoutX="107.0" layoutY="136.0" text="Customer name" />
+        <Label layoutX="107.0" layoutY="182.0" text="Address" />
+        <Label layoutX="109.0" layoutY="224.0" text="Postal code" />
+        <Label layoutX="107.0" layoutY="268.0" text="Phone number" />
+        <TextField fx:id="customeridtxt" editable="false" layoutX="216.0" layoutY="80.0" promptText="Auto Generated" />
+        <TextField fx:id="custnametxt" layoutX="216.0" layoutY="123.0" />
+        <TextField fx:id="addresstxt" layoutX="216.0" layoutY="169.0" />
+        <TextField fx:id="postaltxt" layoutX="217.0" layoutY="220.0" />
+        <TextField fx:id="phonetxt" layoutX="218.0" layoutY="264.0" />
+        <Button fx:id="savebtn" layoutX="580.0" layoutY="453.0" mnemonicParsing="false" onAction="#clickSave" text="Save" />
+        <Button fx:id="cancelbtn" layoutX="649.0" layoutY="453.0" mnemonicParsing="false" onAction="#ClickCancel" text="Cancel" />
+        <ComboBox fx:id="countrycombo" layoutX="218.0" layoutY="313.0" onAction="#chooseCountry" prefWidth="150.0" />
+        <ComboBox fx:id="firstlevelcombo" layoutX="218.0" layoutY="364.0" prefWidth="150.0" />
+        <Label layoutX="107.0" layoutY="317.0" text="Country" />
+        <Label layoutX="109.0" layoutY="368.0" text="First-level division" />
+        <RadioButton fx:id="femaleRbtn" layoutX="107.0" layoutY="416.0" mnemonicParsing="false" onAction="#clickFemaleRbtn" text="Female">
+            <toggleGroup>
+                <ToggleGroup fx:id="toggle1" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="maleRbtn" layoutX="265.0" layoutY="416.0" mnemonicParsing="false" onAction="#clickMaleRbtn" text="Male" toggleGroup="$toggle1" />
+        <Label fx:id="mammogramLbl" layoutX="107.0" layoutY="457.0" text="Last Mammogram Date" />
+        <DatePicker fx:id="mammogramDatePicker" layoutX="245.0" layoutY="453.0" />
+    </children>
+</AnchorPane>

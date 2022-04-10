@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerController">
+    <children>
+        <Label layoutX="38.0" layoutY="29.0" text="Add a new customer">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="96.0" layoutY="97.0" text="Customer ID" />
+        <TextField fx:id="customeridtxt" editable="false" layoutX="192.0" layoutY="93.0" promptText="Auto Generated" />
+        <Label layoutX="96.0" layoutY="151.0" text="Customer Name" />
+        <Label layoutX="96.0" layoutY="198.0" text="Address" />
+        <Label layoutX="96.0" layoutY="242.0" text="Postal Code" />
+        <Label layoutX="96.0" layoutY="289.0" text="Phone Number" />
+        <TextField fx:id="customernametxt" layoutX="193.0" layoutY="147.0" />
+        <TextField fx:id="addresstxt" layoutX="193.0" layoutY="194.0" />
+        <TextField fx:id="postaltxt" layoutX="193.0" layoutY="238.0" />
+        <TextField fx:id="phonetxt" layoutX="194.0" layoutY="285.0" />
+        <Button fx:id="savebtn" layoutX="516.0" layoutY="454.0" mnemonicParsing="false" onAction="#clickSavebtn" text="Save" />
+        <Button fx:id="cancelbtn" layoutX="579.0" layoutY="454.0" mnemonicParsing="false" onAction="#clickcancelbtn" text="Cancel" />
+        <ComboBox fx:id="countrycombo" layoutX="193.0" layoutY="329.0" onAction="#chooseCountry" prefWidth="150.0" />
+        <ComboBox fx:id="firstLevelCombo" layoutX="194.0" layoutY="377.0" prefWidth="150.0" />
+        <Label layoutX="96.0" layoutY="333.0" text="Country" />
+        <Label layoutX="96.0" layoutY="381.0" text="First-level division" />
+        <RadioButton fx:id="femaleRbtn" layoutX="96.0" layoutY="423.0" mnemonicParsing="false" onAction="#clickFemaleRbtn" selected="true" text="Female">
+            <toggleGroup>
+                <ToggleGroup fx:id="toggle1" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="maleRbtn" layoutX="226.0" layoutY="423.0" mnemonicParsing="false" onAction="#clickMaleRbtn" text="Male" toggleGroup="$toggle1" />
+        <Label fx:id="mammogramlbl" layoutX="96.0" layoutY="458.0" text="Last Mammogram Date" />
+        <DatePicker fx:id="mammogramDatePicker" layoutX="228.0" layoutY="454.0" />
+    </children>
+</AnchorPane>
+
